@@ -51,5 +51,4 @@ function loadDataInTable() {
             .getElementsByTagName('td')[0]
             .innerHTML = todoSomatorio.toLocaleString('pt-br',{style:'currency',currency:'BRL'});
     });
-
 }

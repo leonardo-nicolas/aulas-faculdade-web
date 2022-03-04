@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Desenvolvimento WEB com HTML, CSS, JavaScript e PHP</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script type="text/javascript" src="preencheAlunos.js"></script>
+    <script type="text/javascript">
+        function onLoadBody (){
+            realizaCalculo();
+            preencherAlunos();
+        }
+    </script>
+</head>
+<body onload="onLoadBody()">
+    <div>
+        <h1>Componentes de Formulário</h1>
+        <dl>
+            <dt>Professor: Ediberto Mariano</dt>
+            <dt>Envolvidos no grupo (Matrículas e Nomes):</dt>
+                <div id="alunos"></div>
+        </dl>
+    </div>
+    <form id="formHotel" method="post" action="javascript:void(this)">
+        <h4>Form de hotel</h4>
+        <p>
+            Neste exemplo, o valor estimado é preenchido dinâmicamente com JavaScript, usando um valor de <span id="valor-por-hospede-e-noite"></span> por hospede e noite.
+        </p>
+        <fieldset>
+            <legend>Dados Pessoais do Responsável</legend>
+            <div>
+                <label for="nome-hospede">Nome do Hóspede Responsável: </label>
+                <input type="text" name="nome_hospede_resp" id="nome-hospede">
+            </div>
+            <div>
+                <span>Sexo do Hóspede Responsável: </span>
+                <label for="sexo-hospede-resp-masc"><input type="radio" onchange="realizaCalculo()" name="sexo_hosp_resp" id="sexo-hospede-resp-masc"> Masculino </label>
+                <label for="sexo-hospede-resp-fem"><input type="radio" onchange="realizaCalculo()" name="sexo_hosp_resp" id="sexo-hospede-resp-fem"> Feminino </label>
+            </div>
+            <div>
+                <label for="email-hospede">E-mail do Hóspede responsável: </label>
+                <input type="email" name="email_hospede_resp" id="email-hospede">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Para Hospedagem</legend>
+            <div>
+                <label for="data-de-chegada">Data de Chegada: </label>
+                <input type="datetime-local" onchange="realizaCalculo()" name="data_chegada" id="data-de-chegada">
+            </div>
+            <div>
+                <label for="numero-noites">Número de Noites: </label>
+                <span id="num-noites">01</span>
+                <input type="range" onchange="realizaCalculo();mudancaInput(this,'num-noites')" min="1" max="30" value="1" name="numero_noites" id="numero-noites">
+            </div>
+            <div>
+                <label for="numero-hospedes">Quantidade de Hóspedes: </label>
+                <input type="number" onchange="realizaCalculo()" min="1" value="1" name="num_hospedes" id="numero-hospedes">
+            </div>
+            <div>
+                <label for="total-estimado">Total estimado: </label>
+                <output name="nome_hospede_resp" id="total-estimado"></output>
+            </div>
+        </fieldset>
+        <div>
+            <label for="mensagem">Deixe uma mensagem</label><br>
+            <textarea name="mensagem" id="mensagem" cols="50" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar tudo</button>
+        </div>
+    </form>
+</body>
+</html>
