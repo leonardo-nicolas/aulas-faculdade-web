@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalho de Desenvolvimento WEB</title>
+    <script type="application/javascript" src="./scripts.js"></script>
+    <link rel="stylesheet" href="./estilo.css" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body onload="loadDataInTable()">
+    <h1>Trabalho de HTML, CSS, JavaScrip e PHP</h1>
+    <h2>Sumário (Aqui está sendo usado Lista de Definições)</h2>
+    <!-- Lista de Definições -->
+    <dl>
+        <dt><a href="#apresentacao">Sobre</a></dt>
+            <dd>Uso de imagens</dd>
+            <dd>Uso de parágrafos</dd>
+        <dt>Listas:</dt>
+            <dd><a href="#OL">Ordenadas usando OL</a></dd>
+            <dd><a href="#UL">Não-ordenadas usando UL</a></dd>
+        <dt><a href="#tabelas">Tabelas</a></dt>
+            <dd>Uma apresentação de nota de orçamento de uma loja de limpezas</dd>
+    </dl>
+
+    <!-- Imagens, parágrafos, H3, etc. -->
+    <div id="apresentacao" class="resp-container">
+            <div class="resp-item">
+                <h3>Sobre</h3>
+                <p>ESTÁCIO</p>
+                <p>Desenvolvimento em HTML5, CSS3, JavaScript e PHP &nbsp; &nbsp;</p>
+                <p>Aluno: Leonardo Nicolas Sales Dias</p>
+                <p>Professor: Ediberto Mariano</p>
+                <p>Usados neste trabalho:</p>
+                <p>
+                    <img class="icon" src="./images/fedora.svg" alt="Fedora - Sistema operacional em que esta página foi trabalhada.">
+                    <img class="icon" src="./images/WebStorm.svg" alt="JetBrains WebStorm - IDE para JavaScript e CSS">
+                    <img class="icon" src="./images/html5.svg" alt="HTML 5 - A estrutura desta página">
+                    <img class="icon" src="./images/css3.svg" alt="CSS 3 - Usado apenas para remover os espaçamentos entre os parágrafos e aplicar cores, etc.">
+                    <img class="icon" src="./images/javascript.svg" alt="JavaScript - Usado para alterar as listas ordenadas e o tamanho das imagens.">
+                </p>
+                <p>Sistema Operacional: Fedora 35</p>
+                <p>IDE (nesse caso é IDE mesmo): JetBrains WebStorm</p>
+                <p>Estrutura desta página: HTML 5</p>
+                <p>Cores e a foto ao lado direito: CSS 3</p>
+                <p>Interações com esta página: JavaScript</p>
+            </div>
+            <!-- No browser, a foto aparece oval, por causa do CSS. -->
+            <div class="resp-item">
+                <img src="./images/leo.jpeg" alt="Esse é o Leonardo Nicolas">
+            </div>
+    </div>
+
+    <!-- Lista ordenada -->
+    <div id="OL" class="resp-container">
+        <div class="resp-item">
+            <h3>Lista Ordenada de Frutas</h3>
+            <label for="selForOrderList">Selecione como deseja ordenar a lista:</label><br>
+            <select name="selForOrderList" id="selForOrderList" onchange="changeOrdenateList(this.value)">
+                <option value="1">Ordem numérica (1, 2, 3, 4, 5)</option>
+                <option value="i">Alg. Romanos em minúsculo (i, ii, iii, iv, v...)</option>
+                <option value="I">Alg. Romanos em MAIÚSCULO (I, II, III, IV, V...)</option>
+                <option value="a">Ordem alfabética em minúsculo (a, b, c, d, e, f...)</option>
+                <option value="A">Ordem alfabética em MAIÚSCULO (A, B, C, D, E, F...)</option>
+            </select>
+        </div>
+        <ol class="ordenateList resp-item" type="1">
+            <li>Abacaxi</li>
+            <li>Melão</li>
+            <li>Melancia</li>
+            <li>Banana
+                <ol class="ordenateList" type="1">
+                    <li>D'água</li>
+                    <li>Da Terra</li>
+                    <li>Prata</li>
+                </ol>
+            </li>
+            <li>Acerola</li>
+            <li>Kiwi</li>
+            <li>Jaca</li>
+            <li>Manga
+                <ol class="ordenateList" type="1">
+                    <li>Espada</li>
+                    <li>Carlotinha</li>
+                </ol>
+            </li>
+            <li>Maracujá</li>
+            <li>Goiaba</li>
+            <li>Abacaxi</li>
+            <li>Limão</li>
+            <li>Laranja</li>
+            <li>Pêra</li>
+            <li>Maçã</li>
+        </ol>
+
+        <div class="resp-item">
+            <h1>Observação:</h1>
+            <p>Na caixa de listagem ao lado foi utilizado JavaScript, por isso existe uma iteração com as mudanças.</p>
+        </div>
+    </div>
+
+    <!-- Lista não ordenada -->
+    <div class="resp-container" id="UL">
+        <h3>Listas Não-ordenadas de Tecnologias da WEB</h3>
+        <ul>
+            <li>Front-End:
+                <ul>
+                    <li>Base pra tudo (obrigatoriedade praticamente):
+                        <ul>
+                            <li>HTML 5</li>
+                            <li>CSS 3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </li>
+                    <li>Frameworks JS para Front-End:
+                        <ul>
+                            <li>Angular (meu favorito particularmente)</li>
+                            <li>ReactJS (Apesar de ser uma biblioteca JavaScript, ainda assim eu encaixo nessa lista, mesmo eu não gostando muito do ReactJS)</li>
+                            <li>VueJS (Nunca experimentei não, mas aparenta ser bastante interessante. É um frameword adoado no front-end do site da TIM, por exemplo).</li>
+                            <li>jQuery (Apesar de obsoleto, ele já serviu e já salvou muitos programadores).</li>
+                            <li>Entre outros</li>
+                        </ul>
+                    </li>
+                    <li>Frameworks CSS para Front-End:
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>Material UI</li>
+                            <li>Tailwind CSS</li>
+                            <li>Entre outros</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Back-End:
+                <ul>
+                    <li>Base (praticamente uma obrigatoriedade:
+                        <ul>
+                            <li>Lógica de programação</li>
+                            <li>Sistemas Operacionais</li>
+                            <li>Bancos de dados</li>
+                            <li>Infraestrutura</li>
+                            <li>Servidores</li>
+                            <li>ETC.</li>
+                        </ul>
+                    </li>
+                    <li>Linguagens e Frameworks conhecidos e usados Back-end:
+                        <ul>
+                            <li>PHP: Laravel/Zend/CakePHP</li>
+                            <li>Java/Scala/Kotlin: Spring Boot/Ktor</li>
+                            <li>C#/Visual Basic: ASP.NET</li>
+                            <li>JavaScript/TypeScript (Com o NodeJS): ExpressJS</li>
+                            <li>Python: Django/Flask</li>
+                            <li>Ruby: Rails</li>
+                            <li>C/C++: Pode parecer peculiar, mas tem quem goste de escrever o próprio back-end, quase do zero e usando o C. Esses prezam demais por velocidade muito acima do que precisa </li>
+                            <li>Pascal: Diferente do C/C++, esse existe a biblioteca em Delphi (e ainda open-source), chamada Horse Hash-load.</li>
+                        </ul>
+                    </li>
+                    <li>Bancos de Dados:
+                        <ul>
+                            <li>Relacional:
+                                <ul>
+                                    <li>MySQL</li>
+                                    <li>Microsoft SQL Server</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Oracle</li>
+                                    <li>MariaDB (Mesma coisa do MySQL)</li>
+                                    <li>SQLite</li>
+                                    <li>Entre outros</li>
+                                </ul>
+                            </li>
+                            <li>Não-Relacional
+                                <ul>
+                                    <li>MongoDB</li>
+                                    <li>CosmosDB (do Microsoft Azure)</li>
+                                    <li>CassandraDB</li>
+                                    <li>DynamoDB (Amazon Web Services)</li>
+                                    <li>Entre outros</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tabela -->
+    <div id="tabelas" class="resp-container">
+        <div class="resp-item">
+            <h3>Tabela (Nesse exemplo foi utilizado javascript para preencher linha por linha)</h3>
+            <p>Sobre o JavaScript, foi criado um objeto (uma variável) genérica para simular uma chamada de API, de interceptação de dados.</p>
+            <table cellpadding="0" border="1" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th colspan="3" align="center">Limpezaria casa de limpezas pesadas LTDA.</th>
+                        <td rowspan="2">Nº nota:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center">Rua das Margaridas 1350 - Centro <br>
+                            Cidade Maravilhosa - Estado Perigoso - Brasil</td>
+                    </tr>
+                    <tr>
+                        <th>Qtde</th>
+                        <th>Produto ou Descrição</th>
+                        <th>R$/UN ou R$/KG</th>
+                        <th>Vlr Total</th>
+                    </tr>
+                </thead>
+                <!-- O tbody está vazio, sem dados nenhum, porque o javascript já faz todos os trabalho de preenchimento. -->
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3" align="right">Subtotal:</th>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

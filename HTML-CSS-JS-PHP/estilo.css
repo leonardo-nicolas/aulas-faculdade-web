@@ -1,0 +1,73 @@
+/* configurando o corpo e eliminando qualquer excessividade de espaço, deixando apenas o necessário. */
+body{
+    margin: 0;
+    padding: 5px;
+}
+/* auxiliar para criar uma página responsiva, deixando mais lado-a-lado, parte 1 */
+.resp-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    horiz-align: center;
+}
+/* auxiliar para criar uma página responsiva, deixando mais lado-a-lado, parte 2 */
+.resp-item {
+    white-space: nowrap;
+    height: 100%;
+}
+/* Eliminando as margens e deixando o texto mais junto, eliminando o excesso de espaço. */
+#apresentacao .resp-item p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* Aplicando estilos ao nome do aluno: Fundo verde claro e letras em amarelo */
+#apresentacao .resp-item p:nth-child(4){
+    background-color: #50b466;
+    color: #ffff00;
+}
+/* Aplicando estilos ao nome do professor: Fundo azul escuro e letras em amarelo */
+#apresentacao .resp-item p:nth-child(5){
+    background-color: #00088c;
+    color: #ffff00;
+}
+/* Aplicando estilos aos detalhes: Paleta de cores (ou melhor, detalhes das cores) da logo do Fedora e fonte branca. */
+#apresentacao .resp-item p:nth-child(8){
+    background-color: #51A2DA;
+    color:#fff;
+}
+/* Aplicando estilo aos detalhes: Paleta de cores dos fundos da logo do WebStorm (em degadê, via gradiente linear. Fonte preta. */
+#apresentacao .resp-item p:nth-child(9){
+    background-image: linear-gradient(135deg,#07C3F2,#087CFA,#07C3F2,#FCF84A);
+    color: #fff;
+}
+/* Aplicando estilo aos detalhes: Detalhes das cores da logo HTML5 e fonte branca */
+#apresentacao .resp-item p:nth-child(10){
+    background-color: #F16529;
+    color:#fff;
+}
+/* Aplicando estilo aos detalhes: Cores da logo CSS3 e fonte branca */
+#apresentacao .resp-item p:nth-child(11){
+    background-color: #2965F1;
+    color:#fff;
+}
+/* Aplicando estilo aos detalhes: cores da logo JavaScript: Fundo amarelo e fonte preta */
+#apresentacao .resp-item p:nth-child(12){
+    background-color: #F7DF1E;
+    color:#000;
+}
+#apresentacao .resp-item img {
+    height: 15vmax;
+    border-radius: 100%;
+}
+#apresentacao div:first-child{
+    border: 5px solid #00088c;
+    border-radius: 10px;
+    padding: 5px;
+}
+#apresentacao img.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+}
