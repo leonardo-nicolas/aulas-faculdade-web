@@ -1,6 +1,11 @@
 var vlrDiariaHospede = 35.69;
 let alunos = [
-    {"matricula": 201903319153, "nome": "Leonardo Nicolas Sales Dias"}
+    {"matricula": 201903319153, "nome": "Leonardo Nicolas Sales Dias"},
+    {"matricula": 202102283388, "nome": "Joubert Lima Correa de Oliveira"},
+    {"matricula": 202003567418, "nome": "Gustavo martins Barbosa"},
+    {"matricula": 202102212812, "nome": "Jhonata Goncalves Antunes"},
+    {"matricula": 202102212685, "nome": "Emmanuel Machado de Oliveira"},
+    {"matricula": 202002457392, "nome": "Flávio Gomes de Almeida Filho"}
 ];
 
 function preencherAlunos(){
