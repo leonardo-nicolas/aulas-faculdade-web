@@ -14,13 +14,16 @@
     </script>
 </head>
 <body onload="onLoadBody()">
-    <div>
-        <h1>Componentes de Formulário</h1>
-        <dl>
-            <dt>Professor: Ediberto Mariano</dt>
-            <dt>Envolvidos no grupo (Matrículas e Nomes):</dt>
-                <div id="alunos"></div>
-        </dl>
+    <div id="apresentacao">
+        <div class="caixa-apresentacao">
+            <h1>Componentes de Formulário</h1>
+            <dl>
+                <dt>Professor: Ediberto Mariano</dt>
+                <dt>Envolvidos no grupo (Matrículas e Nomes):</dt>
+                    <div id="alunos"></div>
+            </dl>
+        </div>
+        <div class="caixa-apresentacao logo-estacio"></div>
     </div>
     <form id="formHotel" method="post" action="javascript:void(this)">
         <h4>Form de hotel</h4>
@@ -28,23 +31,53 @@
             Neste exemplo, o valor estimado é preenchido dinâmicamente com JavaScript, usando um valor de <span id="valor-por-hospede-e-noite"></span> por hospede e noite.
         </p>
         <fieldset>
-            <legend>Dados Pessoais do Responsável</legend>
+            <legend><em>Dados Pessoais do Responsável</em></legend>
             <div>
                 <label for="nome-hospede">Nome do Hóspede Responsável: </label>
-                <input type="text" name="nome_hospede_resp" id="nome-hospede">
+                <input type="text" placeholder="Fulano de Tal" name="nome_hospede_resp" id="nome-hospede">
             </div>
-            <div>
-                <span>Sexo do Hóspede Responsável: </span>
-                <label for="sexo-hospede-resp-masc"><input type="radio" onchange="realizaCalculo()" name="sexo_hosp_resp" id="sexo-hospede-resp-masc"> Masculino </label>
-                <label for="sexo-hospede-resp-fem"><input type="radio" onchange="realizaCalculo()" name="sexo_hosp_resp" id="sexo-hospede-resp-fem"> Feminino </label>
-            </div>
+            <table><!-- cellspacing="0" cellpadding="0" -->
+                <tbody>
+                    <tr>
+                        <td rowspan="4">
+                            <span>Sexo do Hóspede Responsável: </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" onchange="realizaCalculo()" name="sexo_hosp_resp" id="sexo-hospede-resp-masc">
+                        </td>
+                        <td>
+                            <label for="sexo-hospede-resp-masc">Masculino</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" onchange="realizaCalculo()" name="sexo_hosp_resp" id="sexo-hospede-resp-fem">
+
+                        </td>
+                        <td>
+                            <label for="sexo-hospede-resp-fem">Feminino</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" onchange="realizaCalculo()" name="sexo_hosp_resp" id="sexo-hospede-resp-outro">
+
+                        </td>
+                        <td>
+                            <label for="sexo-hospede-resp-outro">Outro</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <div>
                 <label for="email-hospede">E-mail do Hóspede responsável: </label>
-                <input type="email" name="email_hospede_resp" id="email-hospede">
+                <input type="email" placeholder="cliente@email.com" name="email_hospede_resp" id="email-hospede">
             </div>
         </fieldset>
         <fieldset>
-            <legend>Dados Para Hospedagem</legend>
+            <legend><em>Dados Para Hospedagem</em></legend>
             <div>
                 <label for="data-de-chegada">Data de Chegada: </label>
                 <input type="datetime-local" onchange="realizaCalculo()" name="data_chegada" id="data-de-chegada">
@@ -64,12 +97,24 @@
             </div>
         </fieldset>
         <div>
-            <label for="mensagem">Deixe uma mensagem</label><br>
+            <label for="mensagem"><em>Deixe uma mensagem</em></label><br>
             <textarea name="mensagem" id="mensagem" cols="50" rows="10"></textarea>
         </div>
         <div>
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar tudo</button>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Enviar
+            </button>
+            <button type="reset">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Limpar tudo
+            </button>
         </div>
     </form>
 </body>
